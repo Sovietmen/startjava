@@ -7,7 +7,6 @@ public class Variable {
 	float avrgCoreTemp = 45.7f;
 	double procFrequency = 3.4;
 	char ch = 'a';
-
 	System.out.println("RAM = " + ram);
 	System.out.println("Numbers of cores = " + cores);
 	System.out.println("Total HDD Space (Gb) = " + hddGb);
