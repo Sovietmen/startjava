@@ -1,18 +1,17 @@
 import java.util.*;
 
-public class Calculator{
+public class Calculator {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int num1 = 0, num2 = 0;
 		System.out.println("Enter first integer number:");
-		num1 = scan.nextInt();
-		System.out.println("Enter second integer number:");
-		num2 = scan.nextInt();
+		int num1 = scan.nextInt();
 		System.out.println("Enter sign of operation (+, -, *, /, %, ^):");
+		char operation = scan.next().charAt(0);
+		System.out.println("Enter second integer number:");
+		int num2 = scan.nextInt();
 		long result = 0;
-		char operator = '\0';
-		operator = scan.next().charAt(0);
-		switch (operator) {
+		
+		switch (operation) {
 			case '+':
 				result = num1 + num2;
 				break;
@@ -37,6 +36,6 @@ public class Calculator{
 			default:
 				System.out.println("Wrong symbol");
 		}
-		System.out.println(num1 + " " + operator + " " + num2 + " = " + result);
+		System.out.println(num1 + " " + operation + " " + num2 + " = " + result);
 	}
 }

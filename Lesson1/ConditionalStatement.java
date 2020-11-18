@@ -1,4 +1,4 @@
-public class ConditionalStatement{
+public class ConditionalStatement {
 	public static void main(String[] args) {
 		int age = 23;
 		if (age > 20) {
@@ -21,13 +21,13 @@ public class ConditionalStatement{
 			System.out.println("Height is higher or equal 1.8m");
 		}
 
-		char firstChOfName = 'B';
-		if (firstChOfName == 'M') {
+		char firstNameLetter = 'B';
+		if (firstNameLetter == 'M') {
 			System.out.println("First character of name is \"M\"");
-		} else if (firstChOfName == 'I') {
+		} else if (firstNameLetter == 'I') {
 			System.out.println("Первая буква имени - \"I\"");
 		} else {
-			System.out.println("First character of name is \"" + firstChOfName + "\"");
+			System.out.println("First character of name is \"" + firstNameLetter + "\"");
 		}
 	}
 }
