@@ -8,7 +8,7 @@ public class Calculator{
 		num1 = scan.nextInt();
 		System.out.println("Enter second integer number:");
 		num2 = scan.nextInt();
-		System.out.println("Enter sign of operation (+, -, *, /):");
+		System.out.println("Enter sign of operation (+, -, *, /, %, ^):");
 		int result = 0;
 		char operator = '\0';
 		operator = scan.next().charAt(0);
@@ -24,6 +24,16 @@ public class Calculator{
 				break;
 			case '/':
 				result = num1 / num2;
+				break;
+			case '%':
+				result = num1 % num2;
+				break;
+			case '^':
+				result = num1;
+				for (int i = 1; i < num2; i++){
+					 result *= num1;
+					 System.out.println(result);
+				}
 				break;
 			default:
 				System.out.println("Wrong symbol");
