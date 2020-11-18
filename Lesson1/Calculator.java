@@ -1,5 +1,33 @@
+import java.util.*;
+
 public class Calculator{
-	public static main(String[] args){
-	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int num1 = 0, num2 = 0;
+		System.out.println("Enter first integer number:");
+		num1 = scan.nextInt();
+		System.out.println("Enter second integer number:");
+		num2 = scan.nextInt();
+		System.out.println("Enter sign of operation (+, -, *, /):");
+		int result = 0;
+		char operator = '\0';
+		operator = scan.next().charAt(0);
+		switch (operator) {
+			case '+':
+				result = num1 + num2;
+				break;
+			case '-':
+				result = num1 - num2;
+				break;
+			case '*':
+				result = num1 * num2;
+				break;
+			case '/':
+				result = num1 / num2;
+				break;
+			default:
+				System.out.println("Wrong symbol");
+		}
+		System.out.println(num1 + " " + operator + " " + num2 + " = " + result);
 	}
 }
