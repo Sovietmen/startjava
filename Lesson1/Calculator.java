@@ -29,6 +29,10 @@ public class Calculator {
 				break;
 			case '^':
 				result = num1;
+				if (num2 == 0) {
+					result = 1;
+					break;
+				}
 				for (int i = 1; i < num2; i++){
 					 result *= num1;
 				}
