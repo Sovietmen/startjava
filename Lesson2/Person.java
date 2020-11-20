@@ -22,7 +22,7 @@ public class Person {
 	}
 
 	String talk() {
-		System.out.println("I need your bike and clothe!");
+		return "I need your bike and clothe!";
 	}
 
 	void studyJava() {
