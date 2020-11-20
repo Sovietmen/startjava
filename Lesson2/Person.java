@@ -26,6 +26,6 @@ public class Person {
 	}
 
 	void studyJava() {
-
+		System.out.println("I'm studying Java");
 	}
 }
