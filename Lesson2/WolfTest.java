@@ -1,12 +1,8 @@
 import java.util.*;
 
-public class TestWolf {
+public class WolfTest {
 	public static void main(String[] args) {
 		Wolf wolf = new Wolf ();
-		// wolf.age = 3;
-		// wolf.color = "black";
-		// wolf.sex = "male";
-		// wolf.weight = 10;
 		System.out.println("Set wolf nickname: ");
 		Scanner scan = new Scanner(System.in);
 		wolf.setNickname(scan.next());
