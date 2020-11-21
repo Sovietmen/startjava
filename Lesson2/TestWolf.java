@@ -1,16 +1,29 @@
+import java.util.*;
+
 public class TestWolf {
 	public static void main(String[] args) {
-		Wolf wolf = new Wolf ("Tush");
-		wolf.age = 3;
-		wolf.color = "black";
-		wolf.sex = "male";
-		wolf.weight = 10;
+		Wolf wolf = new Wolf ();
+		// wolf.age = 3;
+		// wolf.color = "black";
+		// wolf.sex = "male";
+		// wolf.weight = 10;
+		System.out.println("Set wolf nickname: ");
+		Scanner scan = new Scanner(System.in);
+		wolf.setNickname(scan.next());
+		System.out.println("Set wolf sex: ");
+		wolf.setSex(scan.next());
+		System.out.println("Set wolf weight: ");
+		wolf.setWeight(scan.nextInt());
+		System.out.println("Set wolf age: ");
+		wolf.setAge(Short.valueOf(scan.next()));
+		System.out.println("Set wolf color: ");
+		wolf.setColor(scan.next());
 
 		System.out.println("Wolf nickname is "+wolf.getNickname());
-		System.out.println("Wolf age is "+wolf.age);
-		System.out.println("Wolf sex is "+wolf.sex);
-		System.out.println("Wolf color is "+wolf.color);
-		System.out.println("Wolf weight is "+wolf.weight);
+		System.out.println("Wolf age is "+wolf.getAge());
+		System.out.println("Wolf sex is "+wolf.getSex());
+		System.out.println("Wolf color is "+wolf.getColor());
+		System.out.println("Wolf weight is "+wolf.getWeight());
 
 		wolf.walk();
 		wolf.sit();
