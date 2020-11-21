@@ -2,7 +2,7 @@ import java.util.*;
 
 public class WolfTest {
 	public static void main(String[] args) {
-		Wolf wolf = new Wolf ();
+		Wolf wolf = new Wolf();
 		System.out.println("Set wolf nickname: ");
 		Scanner scan = new Scanner(System.in);
 		wolf.setNickname(scan.next());
