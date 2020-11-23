@@ -1,24 +1,28 @@
 public class Player {
-	private String playerName;
-	private int playerNumber;
+	private String name;
+	private int number;
 
 	Player() {
 		
 	}
 
-	void setPlayerNumber(int playerNumber) {
-		this.playerNumber = playerNumber;
+	Player(String name) {
+		this.name = name;
 	}
 
-	void setPlayerName(String playerName) {
-		this.playerName = playerName;
+	void setPlayerNumber(int number) {
+		this.number = number;
 	}
 
 	String getPlayerName() {
-		return this.playerName;
+		return name;
+	}
+
+	void setPlayerName(String name) {
+		this.name = name;
 	}
 
 	int getPlayerNumber() {
-		return this.playerNumber;
+		return number;
 	}
 }
