@@ -10,15 +10,15 @@ public class Player {
 		this.number = number;
 	}
 
-	String getName() {
-		return name;
+	int getNumber() {
+		return number;
 	}
 
 	void setName(String name) {
 		this.name = name;
 	}
 
-	int getNumber() {
-		return number;
+	String getName() {
+		return name;
 	}
 }

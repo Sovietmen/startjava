@@ -15,8 +15,8 @@ public class GuessNumberTest {
 			} else if (answer.contentEquals("n")) {
 				break;
 			}
-		System.out.println("Do you want to continue? (y/n)");
-		answer = scan.next();
+			System.out.println("Do you want to continue? (y/n)");
+			answer = scan.next();
 		}
 	}
 }
