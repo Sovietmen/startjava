@@ -16,28 +16,28 @@ public class GuessNumber {
 		secretNumber = random.nextInt(100);
 		while (true) {
 			//player1 checking
-			System.out.println("--------" + player1.getPlayerName() + " turn--------");
+			System.out.println("--------" + player1.getName() + " turn--------");
 			System.out.println("Guess the number in range 0 - 100: ");
-			player1.setPlayerNumber(scan.nextInt());
-			if (player1.getPlayerNumber() > secretNumber) {
-				System.out.println("No. Your number more than my. Now turn to " + player2.getPlayerName());				
-			} else if (player1.getPlayerNumber() < secretNumber) {
-				System.out.println("No. Your number less than my. Now turn to " + player2.getPlayerName());
-			} else if (player1.getPlayerNumber() == secretNumber) {
-				System.out.println("Player " + player1.getPlayerName() + " are winner!!!");
+			player1.setNumber(scan.nextInt());
+			if (player1.getNumber() > secretNumber) {
+				System.out.println("No. Your number more than my. Now turn to " + player2.getName());				
+			} else if (player1.getNumber() < secretNumber) {
+				System.out.println("No. Your number less than my. Now turn to " + player2.getName());
+			} else if (player1.getNumber() == secretNumber) {
+				System.out.println("Player " + player1.getName() + " are winner!!!");
 				break;
 			}
 
 			//player2 checking
-			System.out.println("--------" + player2.getPlayerName() + " turn--------");
+			System.out.println("--------" + player2.getName() + " turn--------");
 			System.out.println("Guess the number in range 0 - 100: ");
-			player2.setPlayerNumber(scan.nextInt());
-			if (player2.getPlayerNumber() > secretNumber) {
-				System.out.println("No. Your number more than my. Now turn to " + player1.getPlayerName());
-			} else if (player2.getPlayerNumber() < secretNumber) {
-				System.out.println("No. Your number less than my. Now turn to " + player1.getPlayerName());
-			} else if(player2.getPlayerNumber() == secretNumber) {
-				System.out.println("Player " + player2.getPlayerName() + " are winner!!!");
+			player2.setNumber(scan.nextInt());
+			if (player2.getNumber() > secretNumber) {
+				System.out.println("No. Your number more than my. Now turn to " + player1.getName());
+			} else if (player2.getNumber() < secretNumber) {
+				System.out.println("No. Your number less than my. Now turn to " + player1.getName());
+			} else if(player2.getNumber() == secretNumber) {
+				System.out.println("Player " + player2.getName() + " are winner!!!");
 				break;
 			}
 		}
