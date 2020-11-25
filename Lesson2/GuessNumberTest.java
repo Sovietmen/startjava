@@ -9,11 +9,9 @@ public class GuessNumberTest {
 		Player player2 = new Player(scan.next());
 		GuessNumber guessNumber = new GuessNumber(player1, player2);
 		String answer = "y";
-		while (true) {
+		while (!(answer.contentEquals("n"))) {
 			if (answer.contentEquals("y")) {
 				guessNumber.runGame();
-			} else if (answer.contentEquals("n")) {
-				break;
 			}
 			System.out.println("Do you want to continue? (y/n)");
 			answer = scan.next();
