@@ -11,7 +11,7 @@ public class GuessNumber {
 		this.player2 = player2;
 	}
 
-	void runGame() {
+	void run() {
 		Scanner scan = new Scanner(System.in);
 		secretNumber = random.nextInt(100);
 		while (true) {

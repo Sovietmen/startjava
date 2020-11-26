@@ -15,23 +15,6 @@ public class Jaeger {
 		this.modelName = modelName;
 	}
 
-	void driftOn() {
-		this.drift = true;
-	}
-
-	void driftOff() {
-		this.drift = false;
-	}
-
-	//setters
-	void setMark(String mark) {
-		this.mark = mark;
-	}
-
-	void setOrigin(String origin) {
-		this.origin = origin;
-	}
-
 	void setParameters(float height, float weight, int strengh, int speed, int armor) {
 		this.height = height;
 		this.weight = weight;
@@ -39,43 +22,58 @@ public class Jaeger {
 		this.speed = speed;
 	}
 
-	//getters
 	String getModelName() {
-		return this.modelName;
+		return modelName;
 	}
 
 	String getMark() {
-		return this.mark;
+		return mark;
+	}
+
+	void setMark(String mark) {
+		this.mark = mark;
 	}
 
 	String getOrigin() {
-		return this.origin;
+		return origin;
+	}
+
+	void setOrigin(String origin) {
+		this.origin = origin;
 	}
 
 	float getHeight() {
-		return this.height;
+		return height;
 	}
 
 	float getWeight() {
-		return this.weight;
-	}
-
-	int getStrengh() {
-		return this.strengh;
+		return weight;
 	}
 
 	int getSpeed() {
-		return this.speed;
+		return speed;
+	}
+
+	int getStrengh() {
+		return strengh;
 	}
 
 	int getArmor() {
-		return this.armor;
-	}
-	boolean getDriftStatus() {
-		return this.drift;
+		return armor;
 	}
 
-	//function
+	void driftOn() {
+		drift = true;
+	}
+
+	void driftOff() {
+		drift = false;
+	}
+
+	boolean getDriftStatus() {
+		return drift;
+	}
+
 	void move() {
 		if (this.drift == true) {
 			System.out.println("Jaeger are moved");

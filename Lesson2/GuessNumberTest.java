@@ -7,11 +7,11 @@ public class GuessNumberTest {
 		Player player1 = new Player(scan.next());
 		System.out.println("Enter name of second player: ");
 		Player player2 = new Player(scan.next());
-		GuessNumber guessNumber = new GuessNumber(player1, player2);
+		GuessNumber game = new GuessNumber(player1, player2);
 		String answer = "y";
-		while (!(answer.contentEquals("n"))) {
+		while (!answer.contentEquals("n")) {
 			if (answer.contentEquals("y")) {
-				guessNumber.runGame();
+				game.run();
 			}
 			System.out.println("Do you want to continue? (y/n)");
 			answer = scan.next();

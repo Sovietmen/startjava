@@ -87,11 +87,6 @@ public class JaegerTest {
 				System.out.println("----------------------------------------");
 				break;
 			}
-				
-			
 		}
-
-		
-
 	}
 }

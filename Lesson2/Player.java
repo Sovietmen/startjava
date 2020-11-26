@@ -6,19 +6,19 @@ public class Player {
 		this.name = name;
 	}
 
-	void setNumber(int number) {
-		this.number = number;
-	}
-
-	int getNumber() {
-		return number;
-	}
-
 	void setName(String name) {
 		this.name = name;
 	}
 
 	String getName() {
 		return name;
+	}
+
+	void setNumber(int number) {
+		this.number = number;
+	}
+
+	int getNumber() {
+		return number;
 	}
 }

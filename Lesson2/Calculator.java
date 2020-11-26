@@ -1,14 +1,8 @@
-
-
 public class Calculator {
 	private int num1;
 	private int num2;
 	private char operationSign;
 	
-	Calculator() {
-
-	}
-
 	public void setNum1(int num1) {
 		this.num1 = num1;
 	}
@@ -20,7 +14,6 @@ public class Calculator {
 	public void setOperation(char operationSign) {
 		this.operationSign = operationSign;
 	}
-
 	
 	public float calculate() {
 		float result = 0;
@@ -53,6 +46,6 @@ public class Calculator {
 			default:
 				System.out.println("Wrong symbol");
 		}
-	return result;
+		return result;
 	}
 }
