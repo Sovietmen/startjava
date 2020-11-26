@@ -11,7 +11,7 @@ public class GuessNumberTest {
 		String answer = "y";
 		while (!answer.contentEquals("n")) {
 			if (answer.contentEquals("y")) {
-				game.run();
+				game.start();
 			}
 			System.out.println("Do you want to continue? (y/n)");
 			answer = scan.next();
