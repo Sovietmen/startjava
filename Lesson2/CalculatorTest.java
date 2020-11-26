@@ -16,8 +16,8 @@ public class CalculatorTest {
 				calculator.setNum2(scan.nextInt());
 				System.out.println("Result = " + calculator.calculate());
 			}
-		System.out.println("Continue (y/n)?");
-		answer = scan.next(); 
+			System.out.println("Continue (y/n)?");
+			answer = scan.next(); 
 		}
 	}
 }
