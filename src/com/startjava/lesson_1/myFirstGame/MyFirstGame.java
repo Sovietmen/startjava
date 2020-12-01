@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.myFirstGame;
+
 import java.util.*;
 
 public class MyFirstGame {

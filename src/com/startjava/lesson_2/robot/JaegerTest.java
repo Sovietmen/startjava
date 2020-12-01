@@ -1,3 +1,5 @@
+package com.startjava.lesson_2.robot;
+
 import java.util.*;
 
 public class JaegerTest {
