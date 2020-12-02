@@ -1,4 +1,4 @@
-package com.startjava.lesson_1.myFirstGame;
+package com.startjava.lesson_1.game;
 
 import java.util.*;
 
