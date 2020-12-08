@@ -8,18 +8,16 @@ public class CalculatorTest {
         String answer;
         Scanner scan = new Scanner(System.in);
         answer = "y";
+        float result = 0.0f;
         while (!answer.contentEquals("n")) {
             if (answer.contentEquals("y")) {
-                System.out.println("Enter first integer number:");
-                calculator.setNum1(scan.nextInt());
-                System.out.println("Enter sign of operation (+, -, *, /, %, ^):");
-                calculator.setOperation(scan.next().charAt(0));
-                System.out.println("Enter second integer number:");
-                calculator.setNum2(scan.nextInt());
-                System.out.println("Result = " + calculator.calculate());
+                System.out.println("Enter math expression: ");
+                calculator.setOperation(scan.nextLine());
+                result = calculator.calculate();
+                System.out.println("Result = " + result);
             }
             System.out.println("Continue (y/n)?");
-            answer = scan.next();
+            answer = scan.nextLine();
         }
     }
 }
