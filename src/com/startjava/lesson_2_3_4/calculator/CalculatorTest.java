@@ -13,8 +13,7 @@ public class CalculatorTest {
             if (answer.contentEquals("y")) {
                 System.out.println("Enter math expression: ");
                 calculator.setOperation(scan.nextLine());
-                result = calculator.calculate();
-                System.out.println("Result = " + result);
+                System.out.println("Result = " + calculator.calculate());
             }
             System.out.println("Continue (y/n)?");
             answer = scan.nextLine();
