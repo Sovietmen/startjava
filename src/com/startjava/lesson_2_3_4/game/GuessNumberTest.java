@@ -13,8 +13,6 @@ public class GuessNumberTest {
         String answer = "y";
         while (!answer.contentEquals("n")) {
             if (answer.contentEquals("y")) {
-                player1.clearTryes();
-                player2.clearTryes();
                 game.start();
             }
             System.out.println("Do you want to continue? (y/n)");

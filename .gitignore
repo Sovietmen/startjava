@@ -1,4 +1,5 @@
 *.class
 *.png
 .idea/
+*.iml
 out/

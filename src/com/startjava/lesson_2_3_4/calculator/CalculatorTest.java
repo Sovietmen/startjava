@@ -8,11 +8,10 @@ public class CalculatorTest {
         String answer;
         Scanner scan = new Scanner(System.in);
         answer = "y";
-        float result = 0.0f;
-        while (!answer.contentEquals("n")) {
-            if (answer.contentEquals("y")) {
+        while (!answer.equals("n")) {
+            if (answer.equals("y")) {
                 System.out.println("Enter math expression: ");
-                calculator.setOperation(scan.nextLine());
+                calculator.setExpression(scan.nextLine());
                 System.out.println("Result = " + calculator.calculate());
             }
             System.out.println("Continue (y/n)?");
