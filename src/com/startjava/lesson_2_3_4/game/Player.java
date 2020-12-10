@@ -1,16 +1,13 @@
 package com.startjava.lesson_2_3_4.game;
 
+import java.util.Arrays;
+
 public class Player {
     private String name;
-    private int number;
     private int[] tryes = new int[10];
     private int tryCount;
 
     Player(String name) {
-        this.name = name;
-    }
-
-    void setName(String name) {
         this.name = name;
     }
 
@@ -19,7 +16,6 @@ public class Player {
     }
 
     void setNumber(int number) {
-        this.number = number;
         tryCount++;
         tryes[tryCount - 1] = number;
     }
@@ -29,19 +25,11 @@ public class Player {
     }
 
     int[] getTryes() {
-        return tryes;
+        return Arrays.copyOf(tryes, tryCount);
     }
 
     void clearTryes() {
-        int i = 0;
-        while (tryes[i] != 0) {
-            tryes[i] = 0;
-            i++;
-        }
+        Arrays.fill(tryes, 0, tryCount, 0);
         tryCount = 0;
-    }
-
-    int getNumber() {
-        return number;
     }
 }
