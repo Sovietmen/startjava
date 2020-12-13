@@ -20,52 +20,52 @@ public class GuessNumber {
         secretNumber = random.nextInt(100);
         System.out.println("Game started. You each have 10 tryes!");
         while (true) {
-            requestForNumber(player1);
+            inputNumber(player1);
             if (checkToWin(player1)) {
                 break;
-            } else {
-                requestForNumber(player2);
-                if (checkToWin(player2)) {
-                    break;
-                }
             }
-            if (player1.getTryCount() == 10) {
-                System.out.println(player1.getName() + " have not enough tryes. Game over.");
+            inputNumber(player2);
+            if (checkToWin(player2)) {
                 break;
             }
-            if (player2.getTryCount() == 10) {
-                System.out.println(player2.getName() + " have not enough tryes. Game over.");
-                break;
-            }
+            if (enoughTryCount(player1)) break;
+            if (enoughTryCount(player2)) break;
         }
         showResult(player1);
         showResult(player2);
         System.out.println();
     }
 
-    void requestForNumber(Player player) {
+    private void inputNumber(Player player) {
         System.out.println("--------" + player.getName() + " turn--------");
         System.out.println("Guess the number in range 0 - 100: ");
         player.setNumber(scan.nextInt());
     }
 
-    boolean checkToWin(Player player) {
-        if (player.getTryes()[player.getTryCount() - 1] > secretNumber) {
-            System.out.println("No. Your number more than my. Now turn to next player.");
-        } else if (player.getTryes()[player.getTryCount() - 1] < secretNumber) {
-            System.out.println("No. Your number less than my. Now turn to next player.");
-        } else if (player.getTryes()[player.getTryCount() - 1] == secretNumber) {
+    private boolean checkToWin(Player player) {
+        int playerNumber = player.getTryes()[player.getTryCount() - 1];
+        if (playerNumber == secretNumber) {
             System.out.println("Player " + player.getName() + " are guess the number " + secretNumber + " on the " + player.getTryCount() + " try!!!");
             return true;
         }
+        String moreLessCheck = (playerNumber > secretNumber) ? " more " : " less ";
+        System.out.println("No. Your number" + moreLessCheck + "than my. Now turn to next player.");
         return false;
     }
 
-    void showResult(Player player) {
+    private void showResult(Player player) {
         System.out.print(player.getName() + ": ");
-        for (int ints : player.getTryes()) {
-            System.out.print(ints + " ");
+        for (int numbers : player.getTryes()) {
+            System.out.print(numbers + " ");
         }
         System.out.println();
+    }
+
+    private boolean enoughTryCount(Player player) {
+        if (player.getTryCount() == 10) {
+            System.out.println(player.getName() + " have not enough tryes. Game over.");
+            return true;
+        }
+        return false;
     }
 }

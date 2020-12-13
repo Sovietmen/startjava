@@ -16,8 +16,8 @@ public class Player {
     }
 
     void setNumber(int number) {
+        tryes[tryCount] = number;
         tryCount++;
-        tryes[tryCount - 1] = number;
     }
 
     int getTryCount() {
